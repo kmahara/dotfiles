@@ -32,8 +32,7 @@ setenv EDITOR vi
 setenv JLESSCHARSET 
 
 # CVS setting
-#setenv CVSROOT $USER@localhost:/home/CVS
-setenv CVSROOT gate.fancrew.net:/home/CVS
+setenv CVSROOT $USER@localhost:/home/CVS
 setenv CVS_RSH /usr/bin/ssh
 
 # java support

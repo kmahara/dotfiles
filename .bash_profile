@@ -23,8 +23,7 @@ fi
 #umask 002
 
 # CVS setting
-#setenv CVSROOT $USER@localhost:/home/CVS
-export CVSROOT=gate.fancrew.net:/home/CVS
+setenv CVSROOT $USER@localhost:/home/CVS
 export CVS_RSH=/usr/bin/ssh
 
 # java support
