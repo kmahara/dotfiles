@@ -1,0 +1,41 @@
+# -*- shell-script -*-
+# Command aliases
+alias ls "ls -CF"
+alias md "mkdir"
+alias rd "rmdir"
+alias rm "rm -f"
+alias su "su -m"
+alias df "df -k"
+alias du "du -k"
+
+alias runc source ~/.cshrc
+
+alias e xemacs
+alias ue xemacs -l un-define
+
+#alias lispcc xemacs -batch -f batch-byte-compile
+#alias xlint xmllint -noout -valid
+
+alias px 'ps -axw -o "%p %z %a"'
+
+alias utf8 "setenv LANG ja_JP.UTF-8"
+alias xterm "setenv TERM xterm"
+alias pp psql -h dbserver -U postgres fancrew_product
+alias pp2 psql -h localhost -U postgres mall_db
+
+# tomcat-a
+alias cout "tail -f /var/log/tomcat7/catalina.out"
+alias toff "service tomcat7 stop"
+alias ton "service tomcat7 start"
+
+# tomcat-b
+alias cout2 "tail -f /opt/tomcat7-b/logs/catalina.out"
+alias toff2 "service tomcat7-b stop"
+alias ton2 "service tomcat7-b start"
+
+alias CAT-VHOST "less /etc/httpd/conf.d/vhost.conf"
+alias VHOST "vi /etc/httpd/conf.d/vhost.conf"
+alias RELOAD-vhost "/etc/init.d/httpd reload"
+
+alias RELOAD-vhost2 "/etc/init.d/httpd-192.168.12.7 reload"
+alias VHOST2 "vi /etc/httpd-192.168.12.7/conf.d/vhost.conf"
