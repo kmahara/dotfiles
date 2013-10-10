@@ -4,5 +4,6 @@
 !/.bash_profile
 !/.bashrc
 !/.cshrc
+!/.emacs
 !/.gitignore
 !/.xemacs
