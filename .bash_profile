@@ -34,7 +34,7 @@ PATH=$PATH:${JAVA_HOME}/bin
 export MIBS=ALL
 
 # =================================================================
-alias runc=". ~/.bashrc"
+alias runc=". ~/.bash_profile"
 
 alias utf8="export LANG=ja_JP.UTF-8"
 alias euc="export LANG=ja_JP.eucJP"
