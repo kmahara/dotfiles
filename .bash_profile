@@ -9,19 +9,17 @@ fi
 
 PATH=$PATH:$HOME/bin
 
-
-. ~/.bash_alias
-
-
-if [ `cat /sys/block/sda/device/vendor` = "VMware," ]; then
-	PS1="\033[32m[\u@\h(VM) \W]\\$\033[0m "
+if [ -f /sys/block/sda/device/vendor ]; then
+	if [ `cat /sys/block/sda/device/vendor` = "VMware," ]; then
+		PS1="\033[32m[\u@\h(VM) \W]\\$\033[0m "
+	fi
 fi
 
 #stty pass8 erase
 #umask 002
 
 # CVS setting
-setenv CVSROOT $USER@localhost:/home/CVS
+export CVSROOT=$USER@localhost:/home/CVS
 export CVS_RSH=/usr/bin/ssh
 
 # java support
@@ -35,6 +33,15 @@ PATH=$PATH:${JAVA_HOME}/bin
 # snmp
 export MIBS=ALL
 
+# =================================================================
+alias runc=". ~/.bashrc"
+
+alias utf8="export LANG=ja_JP.UTF-8"
+alias euc="export LANG=ja_JP.eucJP"
+alias sjis="export LANG=ja_JP.SJIS"
+alias us="export LANG=en_US.UTF-8"
+
+alias e="emacs"
 # =================================================================
 export PATH
 
