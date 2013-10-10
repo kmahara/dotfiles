@@ -41,7 +41,7 @@ alias euc="export LANG=ja_JP.eucJP"
 alias sjis="export LANG=ja_JP.SJIS"
 alias us="export LANG=en_US.UTF-8"
 
-alias e="emacs"
+alias e="LANG=ja_JP.utf8 emacs"
 # =================================================================
 export PATH
 
