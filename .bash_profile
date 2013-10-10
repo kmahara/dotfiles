@@ -10,8 +10,6 @@ fi
 PATH=$PATH:$HOME/bin
 
 
-[ -d /opt/roi/bin ] && PATH=$PATH:/opt/roi/bin
-
 . ~/.bash_alias
 
 
@@ -40,4 +38,3 @@ export MIBS=ALL
 # =================================================================
 export PATH
 
-alias pp="psql -h dbserver -U postgres fancrew_product"
