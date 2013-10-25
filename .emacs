@@ -29,6 +29,9 @@
 ; 色をつけない
 (global-font-lock-mode nil)
 
+; リージョン内を置換できるようにする
+(setq transient-mark-mode t)
+
 (setq load-path (append (list (expand-file-name "~/.emacs.d/elisp/")) load-path))
 
 (load-library "term/bobcat")
