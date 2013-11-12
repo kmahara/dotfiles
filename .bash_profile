@@ -46,7 +46,7 @@ alias sjis="export LANG=ja_JP.SJIS"
 alias us="export LANG=en_US.UTF-8"
 
 alias e="LANG=ja_JP.utf8 emacs"
-alias sum="sudo su -m"
+alias sum="sudo su -"
 
 alias md="mkdir"
 # =================================================================
