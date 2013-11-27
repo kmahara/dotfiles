@@ -11,7 +11,8 @@ fi
 
 if [ -f /sys/block/sda/device/vendor ]; then
         if [ `cat /sys/block/sda/device/vendor` = "VMware," ]; then
-                PS1="\033[32m[\u@\h(VM) \W]\\$\033[0m "
+#                PS1="\033[32m[\u@\h(VM) \W]\\$\033[0m "
+                PS1="[\u@\h(VM) \W] "
         fi
 fi
 
