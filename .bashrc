@@ -29,3 +29,4 @@ alias sudo="sudo -E"
 alias sum="sudo su -m"
 
 alias md="mkdir"
+alias pp="psql -h localhost -U postgres"
