@@ -30,3 +30,5 @@ alias sum="sudo su -m"
 
 alias md="mkdir"
 alias pp="psql -h localhost -U postgres"
+
+alias mvnNotest="mvn -Dmaven.test.skip=true"
