@@ -31,6 +31,8 @@ PATH=$PATH:${JAVA_HOME}/bin
 # snmp
 export MIBS=ALL
 
+# less
+export LESS="-X"
 # =================================================================
 export PATH
 
