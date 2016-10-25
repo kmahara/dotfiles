@@ -29,3 +29,7 @@ alias sudo="sudo -E"
 alias sum="sudo su -m"
 
 alias md="mkdir"
+alias top="top -cH"
+alias pp="psql -h localhost -U postgres"
+
+alias mvnNotest="mvn -Dmaven.test.skip=true"
