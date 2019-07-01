@@ -7,6 +7,8 @@ fi
 
 # User specific aliases and functions
 
+export GIT_PAGER="LESSCHARSET=utf-8 less -R"
+
 # =================================================================
 
 if [ -f /sys/block/sda/device/vendor ]; then
