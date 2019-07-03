@@ -2,6 +2,8 @@
 
 ```vi /etc/yum.repos.d/emacs.repo```
 ```
+[emacs]
+name=Emacs repo
 baseurl=http://pj.freefaculty.org/EL/7/x86_64/
 failovermethod=priority
 enabled=1
