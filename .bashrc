@@ -7,6 +7,8 @@ fi
 
 # User specific aliases and functions
 
+export GIT_PAGER="LESSCHARSET=utf-8 less -R"
+
 # =================================================================
 
 if [ -f /sys/block/sda/device/vendor ]; then
@@ -24,7 +26,8 @@ alias euc="export LANG=ja_JP.eucJP"
 alias sjis="export LANG=ja_JP.SJIS"
 alias us="export LANG=en_US.UTF-8"
 
-alias e="LANG=ja_JP.utf8 emacs"
+alias e='LANG=ja_JP.utf8 emacs'
+alias ec='LANG=ja_JP.utf8 emacsclient -a '\'\'
 alias sudo="sudo -E"
 alias sum="sudo su -m"
 
