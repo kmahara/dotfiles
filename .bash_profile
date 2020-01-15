@@ -32,7 +32,7 @@ PATH=$PATH:$HOME/bin
 export MIBS=ALL
 
 # less
-export LESS="-X"
+export LESS="-X -R"
 # =================================================================
 export PATH
 
