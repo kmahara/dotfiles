@@ -1,38 +1,52 @@
-# .bashrc
+export LANG=ja_JP.UTF-8
+#export http_proxy=http://172.17.0.3:3128
 
-# Source global definitions
-if [ -f /etc/bashrc ]; then
-	. /etc/bashrc
+## ----
+## complete
+
+if [ -f /usr/local/bin/brew ]; then
+	if [ -f $(brew --prefix)/etc/bash_completion ]; then
+	  . $(brew --prefix)/etc/bash_completion
+	fi
+
+	complete -o default vi
 fi
 
-# User specific aliases and functions
 
-export GIT_PAGER="LESSCHARSET=utf-8 less -R"
+## ----
+## path
 
-# =================================================================
+PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
 
-if [ -f /sys/block/sda/device/vendor ]; then
-        if [ `cat /sys/block/sda/device/vendor` = "VMware," ]; then
-#                PS1="\033[32m[\u@\h(VM) \W]\\$\033[0m "
-                PS1="[\u@\h(VM) \W] "
-        fi
+# php
+[ -d /usr/local/opt/php@7.3/bin ] && PATH="/usr/local/opt/php@7.3/bin:$PATH"
+
+# go
+[ -d ~/go/bin ] && PATH="~/go/bin:$PATH"
+
+# dotnet
+[ -d /usr/local/share/dotnet ] && PATH="$PATH:/usr/local/share/dotnet"
+
+# node.js
+if [ -d ~/.nvm ]; then
+	export NVM_DIR="$HOME/.nvm"
+	[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+	[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 fi
 
-# =================================================================
-alias runc=". ~/.bashrc"
+export PATH
 
-alias utf8="export LANG=ja_JP.UTF-8"
-alias euc="export LANG=ja_JP.eucJP"
-alias sjis="export LANG=ja_JP.SJIS"
-alias us="export LANG=en_US.UTF-8"
+## ----
+## alias 
+
+alias use_proxy="export http_proxy=http://172.17.0.3:3128"
+alias pp="psql -h localhost -U postgres"
+alias md="mkdir"
+alias ls="ls -cF"
 
 alias e='LANG=ja_JP.utf8 emacs'
-alias ec='LANG=ja_JP.utf8 emacsclient -a '\'\'
-alias sudo="sudo -E"
-alias sum="sudo su -m"
+alias runc=". ~/.bashrc"
 
-alias md="mkdir"
-alias top="top -cH"
-alias pp="psql -h localhost -U postgres"
-
-alias mvnNotest="mvn -Dmaven.test.skip=true"
+alias d="docker"
+alias dc="docker-compose"
+alias k="kubectl"
