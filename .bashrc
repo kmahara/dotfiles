@@ -1,5 +1,3 @@
-# .bashrc
-
 # Source global definitions
 if [ -f /etc/bashrc ]; then
 	. /etc/bashrc
@@ -18,6 +16,13 @@ if [ -f /sys/block/sda/device/vendor ]; then
         fi
 fi
 
+# node.js
+if [ -d ~/.nvm ]; then
+        export NVM_DIR="$HOME/.nvm"
+        [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+        [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+fi
+
 # =================================================================
 alias runc=". ~/.bashrc"
 
@@ -32,7 +37,12 @@ alias sudo="sudo -E"
 alias sum="sudo su -m"
 
 alias md="mkdir"
+alias ls="ls -cF"
 alias top="top -cH"
 alias pp="psql -h localhost -U postgres"
 
 alias mvnNotest="mvn -Dmaven.test.skip=true"
+
+alias d="docker"
+alias dc="docker-compose"
+alias k="kubectl"
